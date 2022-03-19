@@ -1,13 +1,13 @@
 # Laravel Database Encryption Package
 
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/ndukz/laravel-database-encryption.svg?style=flat-square)](https://packagist.org/packages/ndukz/laravel-database-encryption) 
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/ndukz/laravel-database-encryption-pgsql.svg?style=flat-square)](https://packagist.org/packages/ndukz/laravel-database-encryption-pgsql) 
 [![MIT Licensed](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md) 
-[![Build Status](https://travis-ci.com/ndukz/laravel-database-encryption.svg?branch=main)](https://travis-ci.com/ndukz/laravel-database-encryption) 
-[![Total Downloads](https://img.shields.io/packagist/dt/ndukz/laravel-database-encryption.svg?style=flat-square)](https://packagist.org/packages/ndukz/laravel-database-encryption)
+[![Build Status](https://travis-ci.com/ndukz/laravel-database-encryption.svg?branch=main)](https://travis-ci.com/ndukz/laravel-database-encryption-pgsql) 
+[![Total Downloads](https://img.shields.io/packagist/dt/ndukz/laravel-database-encryption.svg?style=flat-square)](https://packagist.org/packages/ndukz/laravel-database-encryption-pgsql)
 
 
-## Package for encrypting and decrypting model attributes for Laravel using openssl
+## Package for encrypting and decrypting model attributes for Laravel & Postgress using openssl
 
 ## Key Features
 
@@ -21,6 +21,7 @@
 
 * Laravel: >= 5
 * PHP: >= 7.3
+* pgcrypto
 
 ## Schema Requirements
 
