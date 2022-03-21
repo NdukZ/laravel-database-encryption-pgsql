@@ -1,13 +1,13 @@
 # Laravel Database Encryption Package
 
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/elgibor-solution/laravel-database-encryption.svg?style=flat-square)](https://packagist.org/packages/elgibor-solution/laravel-database-encryption) 
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/ndukz/laravel-database-encryption-pgsql.svg?style=flat-square)](https://packagist.org/packages/ndukz/laravel-database-encryption-pgsql) 
 [![MIT Licensed](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md) 
-[![Build Status](https://travis-ci.com/elgibor-solution/laravel-database-encryption.svg?branch=main)](https://travis-ci.com/elgibor-solution/laravel-database-encryption) 
-[![Total Downloads](https://img.shields.io/packagist/dt/elgibor-solution/laravel-database-encryption.svg?style=flat-square)](https://packagist.org/packages/elgibor-solution/laravel-database-encryption)
+[![Build Status](https://travis-ci.com/ndukz/laravel-database-encryption.svg?branch=main)](https://travis-ci.com/ndukz/laravel-database-encryption-pgsql) 
+[![Total Downloads](https://img.shields.io/packagist/dt/ndukz/laravel-database-encryption.svg?style=flat-square)](https://packagist.org/packages/ndukz/laravel-database-encryption-pgsql)
 
 
-## Package for encrypting and decrypting model attributes for Laravel using openssl
+## Package for encrypting and decrypting model attributes for Laravel & Postgress using openssl
 
 ## Key Features
 
@@ -21,6 +21,7 @@
 
 * Laravel: >= 5
 * PHP: >= 7.3
+* pgcrypto
 
 ## Schema Requirements
 
@@ -37,7 +38,7 @@ We highly recommend to alter your column types to `TEXT` or `LONGTEXT`
 Via Composer command line:
 
 ```bash
-$ composer require elgibor-solution/laravel-database-encryption
+$ composer require ndukz/laravel-database-encryption-pgsql
 ```
 
 ### Step 2: Add ServiceProvider to your app/config.php file (Laravel 5.4 or below)
@@ -45,7 +46,7 @@ Add the service provider to the providers array in the config/app.php config fil
 ```php
     'providers' => [
         ...
-        \ESolution\DBEncryption\Providers\DBEncryptionServiceProvider::class,
+        \NdukZ\DBEncryption\Providers\DBEncryptionServiceProvider::class,
     ],
 ```
 
@@ -58,8 +59,7 @@ For example:
 
 ```php
     
-    use ESolution\DBEncryption\Traits\EncryptedAttribute;
-
+    use NdukZ\DBEncryption\Traits\EncryptedAttribute;
     class User extends Eloquent {
         use EncryptedAttribute;
        
@@ -84,7 +84,6 @@ similar to laravel eloquent `where` and `orWhere`.
 
 ```php
     namespace App\Http\Controllers;
-
     use App\User;
     class UsersController extends Controller {
         public function index(Request $request)
@@ -135,9 +134,8 @@ $user = User::whereEncrypted('email','test@gmail.com')->filter(function ($item) 
 
 ## Credits
 This package was inspired from the following:
- [austinheap/laravel-database-encryption](https://github.com/austinheap/laravel-database-encryption)
- [magros/laravel-model-encryption](https://github.com/magros/laravel-model-encryption)
- [DustApplication/laravel-database-model-encryption](https://github.com/DustApplication/laravel-database-model-encryption.git)
+ 
+ [elgibor-solution/laravel-database-encryption](https://github.com/elgibor-solution/laravel-database-encryption)
  
 ## License
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.

@@ -3,7 +3,7 @@
  * src/Encryption.php.
  *
  */
-namespace ESolution\DBEncryption;
+namespace NdukZ\DBEncryption;
 use DB;
 
 class Encrypter

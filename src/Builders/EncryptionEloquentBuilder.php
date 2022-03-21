@@ -3,7 +3,7 @@
  * src/Builders/EncryptionEloquentBuilder.php.
  *
  */
-namespace ESolution\DBEncryption\Builders;
+namespace NdukZ\DBEncryption\Builders;
 use Illuminate\Database\Eloquent\Builder;
 
 class EncryptionEloquentBuilder extends Builder

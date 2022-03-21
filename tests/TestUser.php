@@ -1,10 +1,10 @@
 <?php
 
-namespace ESolution\DBEncryption\Tests;
+namespace NdukZ\DBEncryption\Tests;
 
 use Illuminate\Database\Eloquent\Model;
-use ESolution\DBEncryption\Traits\EncryptedAttribute;
-use ESolution\DBEncryption\Tests\Database\Factories\TestUserFactory;
+use NdukZ\DBEncryption\Traits\EncryptedAttribute;
+use NdukZ\DBEncryption\Tests\Database\Factories\TestUserFactory;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
